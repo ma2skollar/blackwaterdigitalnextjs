@@ -15,9 +15,6 @@ export async function generateMetadata({
   return {
     title: dict.head.title,
     description: dict.head.description,
-    icons: {
-      icon: '/favicon.ico',
-    }
   }
 }
 
@@ -31,7 +28,7 @@ export default async function Page({
       <header>
       </header>
       <main>
-
+        <h1>{dict.welcome}</h1>
       </main>
     </>
   )
