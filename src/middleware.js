@@ -32,7 +32,6 @@ export function middleware(request) {
 
 export const config = {
     matcher: [
-        // Skip _next paths
-        '/((?!_next).*)',
+        '/((?!_next|favicon.ico|.*\\..*).*)',
     ]
 }
