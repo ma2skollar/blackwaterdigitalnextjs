@@ -2,6 +2,7 @@ import type { Metadata, ResolvingMetadata } from 'next'
 
 import { getDictionary } from './dictionaries'
 import {LangParams} from "@/app/[lang]/layout";
+import Header from '../components/header';
 
 type Props = {
   params: Promise<LangParams>
@@ -19,7 +20,7 @@ export async function generateMetadata({
   }
 }
 
-export default async function Page({
+export default async function Home({
   params,
 }: Props) {
   const { lang } = await params
@@ -27,8 +28,7 @@ export default async function Page({
 
   return (
     <>
-      <header>
-      </header>
+      <Header />
       <main>
         <h1>{dict.welcome}</h1>
       </main>
