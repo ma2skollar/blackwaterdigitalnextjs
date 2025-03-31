@@ -1,9 +1,10 @@
 import type { Metadata, ResolvingMetadata } from 'next'
 
 import { getDictionary } from './dictionaries'
+import {LangParams} from "@/app/[lang]/layout";
 
 type Props = {
-  params: Promise<{ lang: 'en' | 'sk' }>
+  params: Promise<LangParams>
 }
 
 export async function generateMetadata({
@@ -23,6 +24,7 @@ export default async function Page({
 }: Props) {
   const { lang } = await params
   const dict = await getDictionary(lang)
+
   return (
     <>
       <header>

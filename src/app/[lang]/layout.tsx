@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { Viewport } from "next";
-
 import "./globals.css";
+import {Language, languages} from "@/app/[lang]/languages";
 
 export const metadata: Metadata = {
   manifest: "/site.webmanifest",
@@ -21,12 +21,20 @@ export const viewport: Viewport = {
   themeColor: "#030403"
 }
 
+export async function generateStaticParams() {
+  return languages.map((lang) => ({ lang }))
+}
+
+export interface LangParams {
+  lang: Language
+}
+
 export default async function RootLayout({
   children,
   params,
 }: Readonly<{
   children: React.ReactNode
-  params: Promise<{ lang: 'en' | 'sk' }>
+  params: Promise<LangParams>
 }>) {
   return (
     <html lang={(await params).lang}>
