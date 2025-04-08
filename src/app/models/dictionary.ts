@@ -120,6 +120,7 @@ export interface Dictionary {
                 }
             }
         }
+        bottomLine: string;
         socialLinkLabels: {
             email: string;
             linkedin: string;

@@ -5,11 +5,12 @@ import {useEffect, useRef, useState} from "react";
 import {Language} from "../../[lang]/languages";
 import BlackwaterLogo from "../blackwaterLogo/blackwaterLogo";
 import './header.css'
-import HeaderButton, {HeaderButtonType} from "@/app/components/headerButton/headerButton";
+import HeaderButton from "@/app/components/headerButton/headerButton";
 import {LangProps} from "@/app/[lang]/page";
 import HeaderDropdown from "@/app/components/headerDropdown/headerDropdown";
 import FlagSK from "@/app/components/svg/flagSK";
 import FlagEN from "@/app/components/svg/flagEN";
+import { NavLinkType } from "@/app/enums/navLinkType";
 
 const Header: React.FC<LangProps> = (props) => {
 
@@ -76,12 +77,12 @@ const Header: React.FC<LangProps> = (props) => {
                     </div>
                     <div className="close-mobile-nav-btn" onClick={handleMobileNavClose}></div>
                 </li>
-                {(Object.values(HeaderButtonType) as HeaderButtonType[]).map((type, index, array) => (
+                {(Object.values(NavLinkType) as NavLinkType[]).map((type, index, array) => (
                     <li key={type} className={index === array.length - 1 ? "nav-action-btn" : undefined}>
                         <HeaderButton
                             type={type}
                             langInfo={props.langInfo}
-                            onClick={type === HeaderButtonType.Home ? handleMobileNavClose : undefined}
+                            onClick={type === NavLinkType.Home ? handleMobileNavClose : undefined}
                         />
                     </li>
                 ))}

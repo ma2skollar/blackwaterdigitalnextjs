@@ -1,15 +1,15 @@
-import './headerButton.css'
+import './footerLink.css'
 import Link from "next/link";
 import {useEffect, useState} from "react";
 import {LangProps} from "@/app/[lang]/page";
 import { NavLinkType } from '@/app/enums/navLinkType';
 
-interface HeaderButtonProps extends LangProps {
+interface FooterLinkProps extends LangProps {
     type: NavLinkType;
     onClick?: () => void;
 }
 
-const HeaderButton: React.FC<HeaderButtonProps> = (props) => {
+const FooterLink: React.FC<FooterLinkProps> = (props) => {
 
     const [text, setText] = useState("");
 
@@ -42,4 +42,4 @@ const HeaderButton: React.FC<HeaderButtonProps> = (props) => {
     );
 }
 
-export default HeaderButton;
+export default FooterLink;

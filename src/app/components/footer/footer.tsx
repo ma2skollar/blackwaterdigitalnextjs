@@ -1,24 +1,11 @@
 'use client'
 
-import {usePathname, useRouter} from "next/navigation";
-import {useEffect, useRef, useState} from "react";
 import BlackwaterLogo from "../blackwaterLogo/blackwaterLogo";
 import FooterSocialButton, { FooterSocialButtonType } from "../footerSocialButton/footerSocialButton";
 import { LangProps } from "@/app/[lang]/page";
+import './footer.css'
 
 const Footer: React.FC<LangProps> = (props) => {
-    
-    const pathname = usePathname()
-    const router = useRouter()
-
-    const navRef = useRef<HTMLElement | null>(null);
-    const [body, setBody] = useState<HTMLElement | null>(null);
-    const [html, setHtml] = useState<HTMLElement | null>(null);
-
-    useEffect(() => {
-        setBody(document.body)
-        setHtml(document.documentElement)
-    }, [])
 
     return (
         <footer>
@@ -26,13 +13,13 @@ const Footer: React.FC<LangProps> = (props) => {
             <BlackwaterLogo />
             {/* <!-- add newsletter signup form --> */}
             <div className="newsletter-signup">
-                <h3>Prihláste sa na odber nášho newsletteru!</h3>
+                <h3>{props.langInfo.dict.footer.newsletter.title}</h3>
                 <form action="" className="newsletter-signup-form">
-                    <input type="name" name="name" id="name" placeholder="Name *" required />
-                    <input type="email" name="email" id="email" placeholder="Email *" required />
-                    <button type="submit">Odoberať</button>
+                    <input type="name" name="name" id="name" placeholder={props.langInfo.dict.footer.newsletter.namePlaceholder} required />
+                    <input type="email" name="email" id="email" placeholder={props.langInfo.dict.footer.newsletter.emailPlaceholder} required />
+                    <button type="submit">{props.langInfo.dict.footer.newsletter.subscribeButton}</button>
                 </form>
-                <p>* Prihlásením sa na odber nášho newsletteru súhlasím so spracovaním mojich osobných údajov, ako moje meno a email.</p>
+                <p>{props.langInfo.dict.footer.newsletter.notice}</p>
             </div>
         </div>
         <div className="footer-menu">
@@ -80,12 +67,13 @@ const Footer: React.FC<LangProps> = (props) => {
             </div>
         </div>
         <div className="footer-bottom-links">
-            <p>© 2025 Blackwater Digital s. r. o. Všetky práva vyhradené.</p>
+            <p>{props.langInfo.dict.footer.bottomLine}</p>
             <div className="socials-footer">
                 {(Object.values(FooterSocialButtonType) as FooterSocialButtonType[]).map((type) => (
                     <FooterSocialButton 
                     type={type} 
                     langInfo={props.langInfo}
+                    key={type}
                     />
                 ))}
             </div>
