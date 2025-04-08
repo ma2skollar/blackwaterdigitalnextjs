@@ -3,6 +3,8 @@ import type { Viewport } from "next";
 import "./globals.css";
 import {Language, languages} from "@/app/[lang]/languages";
 
+// TODO: add fonts
+
 export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   icons: {
