@@ -11,5 +11,34 @@
         "services": "Services",
         "contact": "Contact Us",
         "digitalization": "Digitalization"
+    },
+    "footer": {
+        "newsletter": {
+            "title": "Subscribe to our newsletter!",
+            "name-placeholder": "Name *",
+            "email-placeholder": "Email *",
+            "subscribe-button": "Subscribe",
+            "notice": "By subscribing, you agree to the processing of you personal data, such as your name and email address."
+        },
+        "footer-menu": {
+            "digitalization-solutions": {
+                
+            },
+            "supplementary-services": {
+
+            },
+            "our-work": {
+
+            },
+            "about-us": {
+
+            },
+            "legal": {
+
+            }
+        },
+        "bottom-line": {
+
+        }
     }
 }

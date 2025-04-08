@@ -3,7 +3,7 @@
 import {usePathname, useRouter} from "next/navigation";
 import {useEffect, useRef, useState} from "react";
 import {Language} from "../../[lang]/languages";
-import NavLogo from "../navLogo/navLogo";
+import BlackwaterLogo from "../blackwaterLogo/blackwaterLogo";
 import './header.css'
 import HeaderButton, {HeaderButtonType} from "@/app/components/headerButton/headerButton";
 import {LangProps} from "@/app/[lang]/page";
@@ -59,7 +59,7 @@ const Header: React.FC<LangProps> = (props) => {
 
     return (
         <header>
-        <NavLogo />
+        <BlackwaterLogo />
         <div className="mobile-nav-btn" onClick={handleMobileNavOpen}>
             <div className="top-line-mobile-nav-btn"></div>
             <div className="bottom-line-mobile-nav-btn"></div>

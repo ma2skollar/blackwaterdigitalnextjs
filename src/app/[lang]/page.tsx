@@ -4,6 +4,7 @@ import {Dictionary, getDictionary} from './dictionaries'
 import {LangParams} from "@/app/[lang]/layout";
 import Header from '../components/header/header';
 import {Language} from "@/app/[lang]/languages";
+import Footer from '../components/footer/footer';
 
 type Props = {
   params: Promise<LangParams>
@@ -44,6 +45,7 @@ export default async function Home({
       <main>
         <h1>{dict.welcome}</h1>
       </main>
+      <Footer />
     </>
   )
 }

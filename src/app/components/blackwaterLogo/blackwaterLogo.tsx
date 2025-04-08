@@ -1,7 +1,7 @@
 import { usePathname, useRouter } from "next/navigation";
-import './navLogo.css'
+import './blackwaterLogo.css'
 
-const NavLogo: React.FC = () => {
+const BlackwaterLogo: React.FC = () => {
 
     const pathname = usePathname()
     const router = useRouter()
@@ -95,4 +95,4 @@ const NavLogo: React.FC = () => {
     )
 }
 
-export default NavLogo
+export default BlackwaterLogo
