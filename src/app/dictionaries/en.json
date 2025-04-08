@@ -15,30 +15,133 @@
     "footer": {
         "newsletter": {
             "title": "Subscribe to our newsletter!",
-            "name-placeholder": "Name *",
-            "email-placeholder": "Email *",
-            "subscribe-button": "Subscribe",
+            "namePlaceholder": "Name *",
+            "emailPlaceholder": "Email *",
+            "subscribeButton": "Subscribe",
             "notice": "By subscribing, you agree to the processing of you personal data, such as your name and email address."
         },
-        "footer-menu": {
-            "digitalization-solutions": {
-                
+        "footerMenu": {
+            "digitalizationAudit": {
+                "title":"Digitalization & Process Audit",
+                "link": "/digitalization/",
+                "items": {
+                    "item1": {
+                        "title": "Problem Recognition",
+                        "link": ""
+                    },
+                    "item2": {
+                        "title": "Solutions Identification & Presentation",
+                        "link": ""
+                    },
+                    "item3": {
+                        "title": "Solutions Application",
+                        "link": ""
+                    }
+                }
             },
-            "supplementary-services": {
-
+            "supplementaryServices": {
+                "title":"Supplmentary Services",
+                "link": "/services/",
+                "items": {
+                    "item1": {
+                        "title": "Webpages",
+                        "link": ""
+                    },
+                    "item2": {
+                        "title": "Social Media",
+                        "link": ""
+                    },
+                    "item3": {
+                        "title": "Visuals",
+                        "link": ""
+                    },
+                    "item4": {
+                        "title": "Custom Software",
+                        "link": ""
+                    }
+                }
             },
-            "our-work": {
-
+            "ourWork": {
+                "title":"Our Work",
+                "link": "/our-work/",
+                "items": {
+                    "item1": {
+                        "title": "Porschery",
+                        "link": ""
+                    },
+                    "item2": {
+                        "title": "Nailden",
+                        "link": ""
+                    },
+                    "item3": {
+                        "title": "Vaše Voľby",
+                        "link": ""
+                    }
+                }
             },
-            "about-us": {
-
+            "aboutUs": {
+                "title":"About Us",
+                "link": "/about/",
+                "items": {
+                    "item1": {
+                        "title": "Mission Statement",
+                        "link": ""
+                    },
+                    "item2": {
+                        "title": "Vision",
+                        "link": ""
+                    },
+                    "item3": {
+                        "title": "Our Motivation",
+                        "link": ""
+                    },
+                    "item4": {
+                        "title": "Meet the Team",
+                        "link": ""
+                    }
+                }
             },
             "legal": {
-
+                "title":"Legal",
+                "link": "/legal/",
+                "items": {
+                    "item1": {
+                        "title": "Imprint",
+                        "link": ""
+                    },
+                    "item2": {
+                        "title": "Privacy Policy",
+                        "link": ""
+                    },
+                    "item3": {
+                        "title": "Compliance",
+                        "link": ""
+                    }
+                }
             }
         },
-        "bottom-line": {
-
+        "bottomLine": "© 2025 Blackwater Digital s. r. o. All rights reserved.",
+        "socialLinkLabels": {
+            "email": {
+                "link": "mailto:info@blackwaterdigital.sk",
+                "label": "Ikonka na Email pre firmu Blackwater Digital"
+            },
+            "linkedin": {
+                "link": "https://www.linkedin.com/company/blackwaterdigitalsk/",
+                "label": "Ikonka na LinkedIn pre firmu Blackwater Digital"
+            },
+            "facebook": {
+                "link": "https://www.facebook.com/blackwaterdigitalsk",
+                "label": "Ikonka na Facebook pre firmu Blackwater Digital"
+            },
+            "instagram": {
+                "link": "https://www.instagram.com/blackwaterdigitalsk/",
+                "label": "Ikonka na Instagram pre firmu Blackwater Digital"
+            },
+            "github": {
+                "link": "https://github.com/BlackwaterDigital",
+                "label": "Ikonka na GitHub pre firmu Blackwater Digital"
+            }
         }
     }
 }

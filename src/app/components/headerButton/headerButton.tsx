@@ -9,9 +9,9 @@ interface HeaderButtonProps extends LangProps {
 }
 
 export enum HeaderButtonType {
-    Home = "#",
+    Home = "/",
     About = "/about/",
-    Work = "/work/",
+    Work = "/our-work/",
     Services = "/services/",
     //Contact = "/contact/",
     Digitalization = "/digitalization/"
@@ -27,7 +27,6 @@ const HeaderButton: React.FC<HeaderButtonProps> = (props) => {
             switch (props.type) {
                 case HeaderButtonType.Home:
                     setText(dict.nav.home)
-                    console.log(dict.nav.home)
                     break;
                 case HeaderButtonType.About:
                     setText(dict.nav.about)
