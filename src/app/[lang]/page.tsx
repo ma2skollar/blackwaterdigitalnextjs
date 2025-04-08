@@ -1,6 +1,7 @@
 import type { Metadata, ResolvingMetadata } from 'next'
 
-import {Dictionary, getDictionary} from './dictionaries'
+import {getDictionary} from './dictionaries'
+import {Dictionary} from "@/app/models/dictionary";
 import {LangParams} from "@/app/[lang]/layout";
 import Header from '../components/header/header';
 import {Language} from "@/app/[lang]/languages";
@@ -45,7 +46,7 @@ export default async function Home({
       <main>
         <h1>{dict.welcome}</h1>
       </main>
-      <Footer />
+      <Footer langInfo={langInfo} />
     </>
   )
 }

@@ -7,17 +7,17 @@ import LinkedInIcon from "../svg/linkedinIcon";
 import { LangProps } from "@/app/[lang]/page";
 import { useEffect, useState } from "react";
 
-const SocialMediaIcon = ({type}: {type: string}) => {
+const SocialMediaIcon = ({type}: {type: FooterSocialButtonType}) => {
     switch (type) {
-        case "email":
+        case FooterSocialButtonType.Email:
             return <EmailIcon />;
-        case "linkedin":
+        case FooterSocialButtonType.LinkedIn:
             return <LinkedInIcon />;
-        case "facebook":
+        case FooterSocialButtonType.Facebook:
             return <FacebookIcon />;
-        case "instagram":
+        case FooterSocialButtonType.Instagram:
             return <InstagramIcon />;
-        case "twitter":
+        case FooterSocialButtonType.GitHub:
             return <GitHubIcon />;
         default:
             return null;
@@ -29,16 +29,15 @@ interface FooterSocialButtonProps extends LangProps {
     onClick?: () => void;
 }
 export enum FooterSocialButtonType {
-    Email = "email",
-    LinkedIn = "github",
-    Facebook = "facebook",
-    Instagram = "instagram",
-    GitHub = "github",
+    Email = "mailto:info@blackwaterdigital.sk",
+    LinkedIn = "https://www.linkedin.com/company/blackwaterdigitalsk/",
+    Facebook = "https://www.facebook.com/blackwaterdigitalsk",
+    Instagram = "https://www.instagram.com/blackwaterdigitalsk/",
+    GitHub = "https://github.com/BlackwaterDigital",
 }
 
 const FooterSocialButton: React.FC<FooterSocialButtonProps> = (props) => {
 
-    const [link, setLink] = useState("");
     const [ariaLabel, setAriaLabel] = useState("");
 
     useEffect(() => {
@@ -46,24 +45,19 @@ const FooterSocialButton: React.FC<FooterSocialButtonProps> = (props) => {
             const dict = props.langInfo.dict
             switch (props.type) {
                 case FooterSocialButtonType.Email:
-                    setLink(dict.footer.socialLinkLabels.email.link);
-                    setAriaLabel(dict.footer.socialLinkLabels.email.label);
+                    setAriaLabel(dict.footer.socialLinkLabels.email);
                     break;
                 case FooterSocialButtonType.LinkedIn:
-                    setLink(dict.footer.socialLinkLabels.linkedin.link);
-                    setAriaLabel(dict.footer.socialLinkLabels.linkedin.label);
+                    setAriaLabel(dict.footer.socialLinkLabels.linkedin);
                     break;
                 case FooterSocialButtonType.Facebook:
-                    setLink(dict.footer.socialLinkLabels.facebook.link);
-                    setAriaLabel(dict.footer.socialLinkLabels.facebook.label);
+                    setAriaLabel(dict.footer.socialLinkLabels.facebook);
                     break;
                 case FooterSocialButtonType.Instagram:
-                    setLink(dict.footer.socialLinkLabels.instagram.link);
-                    setAriaLabel(dict.footer.socialLinkLabels.instagram.label);
+                    setAriaLabel(dict.footer.socialLinkLabels.instagram);
                     break;
                 case FooterSocialButtonType.GitHub:
-                    setLink(dict.footer.socialLinkLabels.github.link);
-                    setAriaLabel(dict.footer.socialLinkLabels.github.label);
+                    setAriaLabel(dict.footer.socialLinkLabels.github);
                     break;
             }
         }
@@ -71,7 +65,7 @@ const FooterSocialButton: React.FC<FooterSocialButtonProps> = (props) => {
     }, []);
 
     return (
-        <Link href={link} target={"_blank"} aria-label={ariaLabel} onClick={props.onClick}>
+        <Link href={props.type} target={"_blank"} aria-label={ariaLabel}>
             <SocialMediaIcon type={props.type} />
         </Link>
     )

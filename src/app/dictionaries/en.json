@@ -122,26 +122,11 @@
         },
         "bottomLine": "© 2025 Blackwater Digital s. r. o. All rights reserved.",
         "socialLinkLabels": {
-            "email": {
-                "link": "mailto:info@blackwaterdigital.sk",
-                "label": "Ikonka na Email pre firmu Blackwater Digital"
-            },
-            "linkedin": {
-                "link": "https://www.linkedin.com/company/blackwaterdigitalsk/",
-                "label": "Ikonka na LinkedIn pre firmu Blackwater Digital"
-            },
-            "facebook": {
-                "link": "https://www.facebook.com/blackwaterdigitalsk",
-                "label": "Ikonka na Facebook pre firmu Blackwater Digital"
-            },
-            "instagram": {
-                "link": "https://www.instagram.com/blackwaterdigitalsk/",
-                "label": "Ikonka na Instagram pre firmu Blackwater Digital"
-            },
-            "github": {
-                "link": "https://github.com/BlackwaterDigital",
-                "label": "Ikonka na GitHub pre firmu Blackwater Digital"
-            }
+            "email": "Email icon for Blackwater Digital",
+            "linkedin": "LinkedIn icon for Blackwater Digital",
+            "facebook": "Facebook icon for Blackwater Digital",
+            "instagram": "Instagram icon for Blackwater Digital",
+            "github": "GitHub icon for Blackwater Digital"
         }
     }
 }
