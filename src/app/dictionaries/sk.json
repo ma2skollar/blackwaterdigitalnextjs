@@ -3,5 +3,13 @@
         "title": "Domov | Blackwater Digital",
         "description": "Špecializujeme sa na inovatívnu digitalizáciu na mieru pre Vaše podnikanie."
     },
-    "welcome": "Vitaj svet!"
+    "welcome": "Vitaj svet!",
+    "nav": {
+        "home": "Domov",
+        "about": "O nàs",
+        "work": "Naša práca",
+        "services": "Služby",
+        "contact": "Kontaktujte nás",
+        "digitalization": "Digitalizácia"
+    }
 }

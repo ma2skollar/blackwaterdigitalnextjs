@@ -1,0 +1,90 @@
+@media only screen and (min-width: 1000px) {
+    .dropdown {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .dropdown > li {
+        display: block;
+        position: relative;
+        height: 32px;
+        width: 32px;
+        padding: 10px 25px;
+    }
+
+    .dropdown > li::before {
+        content: url('/assets/lang-icon.svg');
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 32px;
+        width: 32px;
+        padding: 10px 25px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .dropdown > li::after {
+        content: url('/assets/lang-icon-tint.svg');
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 32px;
+        width: 32px;
+        padding: 10px 25px;
+        cursor: pointer;
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .dropdown > li:hover::after {
+        opacity: 1;
+    }
+
+    .dropdown > li:hover::before {
+        opacity: 0;
+    }
+
+    .dropdown-content {
+        position: absolute;
+        list-style: none;
+        padding: 0;
+        display: flex;
+        top: 110px;
+        background-color: var(--black-color);
+        width: 170px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        opacity: 1;
+        pointer-events: auto;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .dropdown-content > li {
+        margin: 0;
+        height: 40px;
+        width: 60px;
+        opacity: 0.6;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .dropdown-content > li:hover {
+        opacity: 1;
+    }
+
+    .dropdown-content > li.active {
+        opacity: 1;
+    }
+
+    .hidden-dropdown > .dropdown-content {
+        opacity: 0;
+        pointer-events: none;
+    }
+}

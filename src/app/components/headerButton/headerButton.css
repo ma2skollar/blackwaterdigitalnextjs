@@ -1,0 +1,43 @@
+/* nav > ul > li > a is now .nav-link */
+
+@media only screen and (min-width: 1000px) {
+    .nav-link {
+        display: block;
+        text-decoration: none;
+        color: var(--main-color);
+        font-family: var(--text-font);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: -1.2px;
+        padding: 10px;
+        box-sizing: border-box;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .nav-link:hover {
+        color: var(--tint-color);
+    }
+}
+
+@media only screen and (max-width: 999px) {
+    .nav-link {
+        text-decoration: none;
+        display: flex;
+        box-sizing: border-box;
+        padding: 10px;
+        padding-right: 40px;
+        width: fit-content;
+        height: fit-content;
+        align-items: center;
+        justify-content: flex-start;
+        color: var(--main-color);
+        font-family: var(--text-font);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 17px;
+        letter-spacing: -1.2px;
+    }
+}

@@ -1,12 +1,20 @@
 import 'server-only'
 import {Language} from "@/app/[lang]/languages";
 
-interface Dictionary {
+export interface Dictionary {
     head: {
         title: string;
         description: string;
     }
     welcome: string
+    nav: {
+        home: string;
+        about: string;
+        work: string;
+        services: string;
+        contact: string;
+        digitalization: string;
+    }
 }
 
 const dictionaries: Record<Language, () => Promise<Dictionary>> = {
